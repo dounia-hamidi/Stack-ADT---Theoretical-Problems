@@ -1,0 +1,24 @@
+1\- Using a Stack in DFS:
+In the stack-based DFS, an explicit stack is used to keep track of vertices to be explored. Here’s how it works:
+
+  * Steps of the Stack-Based DFS Algorithm
+    1)Initialize:
+        - Create an empty stack.
+        - Push the starting vertex onto the stack.
+    2)Traverse the Graph:
+         While the stack is not empty:
+           - Pop the top vertex from the stack.
+           - If the vertex has not been visited:
+                     - Mark it as visited.
+                     - Push all its unvisited neighbors onto the stack.
+    3)Repeat Until Complete:
+           - Continue this process until all reachable vertices have been visited.
+
+2\- Comparison: Stack-Based DFS vs. Recursive DFS
+     1)Stack-Based DFS:
+         - Memory Usage: Uses an explicit stack. Requires O(V) memory for the stack (where V is the number of vertices).
+         - Performance: Slightly slower due to explicit stack management overhead.
+     2)Recursive DFS:
+         - Memory Usage: Uses the call stack. Memory usage depends on the recursion depth, which can go up to O(V).
+         - Performance: Slightly faster due to native call stack optimizations.
+

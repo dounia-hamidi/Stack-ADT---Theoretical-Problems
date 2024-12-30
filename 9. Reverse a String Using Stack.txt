@@ -1,0 +1,39 @@
+1\- Steps to Reverse a String Using a Stack:
+  1)Initialize a Stack:
+     - Create an empty stack.
+  2)Push Characters onto the Stack:
+     - Traverse the string from left to right.
+     - For each character in the string, push it onto the stack.
+  3)Pop Characters from the Stack:
+     - While the stack is not empty, pop characters from the stack one by one.
+     - Append each popped character to a new string.
+  4)Result:
+     - The new string contains the characters in reverse order.
+
+Example
+ * Input String: "hello"
+ * Process:
+   1)Push Characters onto the Stack:
+    - Initially, stack: []
+    - Push 'h': Stack: ['h']
+    - Push 'e': Stack: ['h', 'e']
+    - Push 'l': Stack: ['h', 'e', 'l']
+    - Push 'l': Stack: ['h', 'e', 'l', 'l']
+    - Push 'o': Stack: ['h', 'e', 'l', 'l', 'o']
+   2)Pop Characters from the Stack:
+    - Pop 'o': Result: "o"
+    - Pop 'l': Result: "ol"
+    - Pop 'l': Result: "oll"
+    - Pop 'e': Result: "olle"
+    - Pop 'h': Result: "olleh"
+   3)Final Result:
+    - Reversed string: "olleh"
+
+2\- Why is a stack a good choice for this problem:
+   1)LIFO Property:
+    - The stack's Last In, First Out behavior automatically reverses the order of characters when they are pushed and popped.
+   2)Simplicity:
+    - The algorithm is straightforward and easy to implement using a stack.
+   3)Isolation:
+    - The stack temporarily holds the characters, ensuring that the original string remains unmodified during the reversal process.
+

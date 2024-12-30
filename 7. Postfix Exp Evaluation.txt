@@ -1,0 +1,41 @@
+Algorithm to Evaluate a Postfix Expression
+
+1)Initialize:
+ - Create an empty stack.
+
+2)Process Each Token:
+For each token in the postfix expression (read from left to right):
+ * Operand: 
+      - Push it onto the stack.
+ * Operator:
+      - Pop the top two elements from the stack.
+      - Apply the operator to these two operands (the second popped element is the left operand, and the first popped is the right operand).
+      - Push the result back onto the stack.
+
+3)Final Result:
+After processing all tokens, the final result will be the only value left in the stack.
+
+Example:
+
+Postfix Expression: 3 4 + 2 * 7 /
+1)Initialize:
+Stack: []
+2)Process Each Token:
+  - 3: Push onto the stack.
+Stack: [3]
+  - 4: Push onto the stack.
+Stack: [3, 4]
+  - +: Pop 4 and 3, compute 3 + 4 = 7, push the result onto the stack.
+Stack: [7]
+  - 2: Push onto the stack.
+Stack: [7, 2]
+  - *: Pop 2 and 7, compute 7 * 2 = 14, push the result onto the stack.
+Stack: [14]
+  - 7: Push onto the stack.
+Stack: [14, 7]
+  - /: Pop 7 and 14, compute 14 / 7 = 2, push the result onto the stack.
+Stack: [2]
+
+3)Final Result:
+  - The stack contains a single value: [2].
+  - Result: 2

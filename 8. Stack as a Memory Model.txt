@@ -1,0 +1,31 @@
+1\- The Role of the Call Stack in Function Calls:
+
+The call stack is a fundamental structure used by most programming languages to manage function calls and their execution. 
+It is a stack-based data structure that keeps track of active function calls, their local variables, and execution states. 
+It works on the Last In, First Out (LIFO) principle.
+
+2\- How the Call Stack Manages Function Calls:
+  1) Function Calls:
+   - When a function is called, a new stack frame (or activation record) is created and pushed onto the call stack.
+   - This stack frame contains:
+      - The function's local variables.
+      - The function's parameters.
+      - The return address (i.e., where the program should resume after the function completes).
+ 
+  2)Function Execution:
+      - The CPU executes the instructions of the function at the top of the stack (the most recently called function).
+      - When the function finishes, its stack frame is popped from the call stack.
+
+   3)Return to Caller:
+      - After popping the stack frame, the control is transferred back to the function's caller using the stored return address.
+
+3\- How the Call Stack Manages Local Variables:
+   - Each function has its own stack frame, so local variables and parameters for a function are isolated from other functions.
+   - This ensures no interference between variables of different function calls, even if they have the same names.
+   - Once a function finishes, its stack frame (and all its local variables) is removed, freeing up memory.
+
+4\- How the Call Stack Manages Recursion:
+Recursion involves a function calling itself. Each recursive call:
+   - Pushes a new stack frame onto the call stack.
+   - Stores the state of the function, including its parameters and local variables, for that specific call.
+

@@ -1,0 +1,44 @@
+TD7 - Stack ADT
+
+Theoretical Problems
+
+1. What is a stack?
+
+A stack is a linear data structure that follows the LIFO (Last In, First Out) principle. 
+In a stack, the most recently added element is the first one to be removed. This means that the last item pushed onto the stack is the first item popped.
+
+LIFO (Last In, First Out) means that the last element added (pushed) to the stack is the first one to be removed (popped)
+
+Example: 
+
+#include <stdio.h>
+
+#define MAX_SIZE 3
+
+int stack[MAX_SIZE];
+int top = -1;
+
+void push(int item) {
+    if (top < MAX_SIZE - 1) {
+        stack[++top] = item;
+    }
+}
+
+int pop() {
+    if (top != -1) {
+        return stack[top--];
+    }
+    return -1;  // Error if stack is empty
+}
+
+int main() {
+    push(10);
+    push(20);
+    push(30);
+
+    printf("Popped: %d\n", pop());  // Should pop 30
+    printf("Popped: %d\n", pop());  // Should pop 20
+    printf("Popped: %d\n", pop());  // Should pop 10
+
+    return 0;
+}

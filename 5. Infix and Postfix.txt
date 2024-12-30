@@ -1,0 +1,30 @@
+Algorithm to Convert Infix to Postfix Expression
+
+1\- Steps to Convert Infix to Postfix Using a Stack
+1)Initialize:
+
+- Create an empty stack for operators.
+- Create an empty list for the postfix expression (output).
+
+2)Process Each Symbol: Iterate through the infix expression, and for each symbol:
+
+* Operand:
+- Append operands (e.g., A, B, C) directly to the postfix output.
+* Operator:
+While the stack is not empty and the operator at the top of the stack has greater or equal precedence than the current operator:
+- Pop the operator from the stack and append it to the output.
+- Push the current operator onto the stack.
+* Left Parenthesis (:
+- Push it onto the stack to signify the start of a sub-expression.
+* Right Parenthesis ):
+- Pop operators from the stack and append them to the output until a left parenthesis ( is encountered.
+- Discard the left parenthesis.
+
+3)Pop Remaining Operators:
+
+After processing all symbols in the infix expression, pop any remaining operators in the stack and append them to the output.
+
+2\-Reasoning Behind the Steps:
+
+1)Using a Stack: The stack helps manage operator precedence and parentheses efficiently. Operators with higher precedence are processed first.
+2)Precedence and Associativity: Operators like * and / have higher precedence than + and -. Left-to-right associativity ensures correct order in the postfix output.

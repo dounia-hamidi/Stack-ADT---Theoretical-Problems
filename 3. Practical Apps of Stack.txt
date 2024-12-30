@@ -1,0 +1,28 @@
+Three practical applications of stacks in computer science and real-world systems:
+
+1. Function Call Management (Call Stack)
+Description: When a function is called in a program, the current state (such as local variables, return addresses, and the function parameters) is saved onto the call stack. 
+As functions call other functions, the previous state is pushed onto the stack. Once a function finishes execution, the state is popped from the stack, and control returns to the calling function.
+
+Example: In C or Java, when a function is called recursively, each function call is added to the stack. The stack keeps track of the return addresses, so after each call completes, the program knows where to return to.
+
+Real-World Example: In web browsers, the back button functionality uses a stack to keep track of visited pages. When you visit a page, its URL is pushed onto the stack. 
+Pressing the back button pops the top URL off the stack, taking you to the previous page.
+
+2. Expression Evaluation (Postfix and Infix Expressions)
+Description: Stacks are often used to evaluate arithmetic expressions, especially in the context of postfix (Reverse Polish Notation) and infix (regular arithmetic expressions with parentheses).
+
+Example: When evaluating an expression like 3 + 5 * (2 - 8), a stack is used to hold operators and operands, 
+ensuring that operations inside parentheses are evaluated first and that operators are applied in the correct order based on precedence.
+
+Real-World Example: A calculator or interpreter for programming languages often uses a stack to evaluate expressions. 
+For example, evaluating the expression 3 + (2 * 5) in a calculator involves using a stack to handle the operations correctly by first evaluating the multiplication and then performing the addition.
+
+3. Undo/Redo Functionality
+Description: Many applications, like text editors or image editors, use stacks to implement the undo/redo functionality. 
+Each action (e.g., typing a letter or drawing a line) is pushed onto a stack. When the user presses undo, the last action is popped from the stack and reverted. The redo operation re-applies the most recently undone action.
+
+Example: In a text editor, typing "Hello" might push a single action onto the stack. Pressing undo would pop that action, and pressing redo would push it back, re-applying the action.
+
+Real-World Example: Microsoft Word or Photoshop uses stacks to track changes. 
+Each modification (e.g., a keystroke or drawing action) is added to a stack, allowing users to revert or reapply changes interactively.

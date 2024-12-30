@@ -1,0 +1,27 @@
+Stack Overflow and Stack Underflow
+
+1. Stack Overflow
+
+Definition: Stack overflow occurs when a stack exceeds its maximum storage capacity.
+
+Cause: This happens when you attempt to push an element onto a stack that is already full.
+
+Example:
+If the stack has a size limit of 5 and you try to push the 6th element, it will lead to stack overflow.
+
+How to Avoid Stack Overflow:
+1)Check for Full Condition: Always check if the stack is full before performing the push operation.
+2)Dynamic Resizing: Use dynamically resizable data structures instead of fixed-size stacks.
+
+2. Stack Underflow
+
+Definition: Stack underflow occurs when you attempt to pop an element from an empty stack.
+
+Cause: This happens when the pop or peek operation is performed on an empty stack.
+
+Example:
+If the stack has no elements (i.e., size = 0) and you try to remove an element, it will lead to stack underflow.
+
+How to Avoid Stack Underflow:
+1)Check for Empty Condition: Always check if the stack is empty before performing the pop or peek operation.
+2)Boundary Checks: Use robust error handling to ensure that invalid operations on empty stacks are caught.

@@ -1,0 +1,65 @@
+1\- Algorithm to Check Balanced Parentheses Using a Stack:
+
+1)Initialize:
+
+- Create an empty stack.
+
+2)Traverse the Expression:
+
+For each character in the expression:
+* Opening Parenthesis (:
+     - Push it onto the stack.
+* Closing Parenthesis ):
+     - If the stack is empty (no matching opening parenthesis), the parentheses are unbalanced.
+     - Otherwise, pop the top of the stack (it should be a matching ().
+     - Ignore all other characters (e.g., operands or operators).
+
+3)Final Check:
+
+After processing the entire expression:
+ - If the stack is empty, the parentheses are balanced.
+ - If the stack is not empty, there are unmatched opening parentheses, so the expression is unbalanced.
+
+Example:
+
+Input Expression: (A + B) * (C / D)
+1)Initialize:
+Stack: []
+2)Traverse the Expression:
+ - (: Push to stack.
+Stack: [(]
+ - A: Ignore.
+Stack: [(]
+ - +: Ignore.
+Stack: [(]
+ - B: Ignore.
+Stack: [(]
+ - ): Pop from stack.
+Stack: []
+ - *: Ignore.
+Stack: []
+ - (: Push to stack.
+Stack: [(]
+ - C: Ignore.
+Stack: [(]
+ - /: Ignore.
+Stack: [(]
+ - D: Ignore.
+Stack: [(]
+ - ): Pop from stack.
+Stack: []
+
+3)Final Check:
+Stack: [] (Empty, so the expression is balanced).
+                                                                                                        Output: Balanced
+
+2\- What Does It Mean for Parentheses to Be Balanced?
+Parentheses in an expression are considered balanced if:
+
+ - Every opening parenthesis ( has a corresponding closing parenthesis ).
+ - Parentheses are correctly nested, meaning no closing parenthesis appears before its corresponding opening parenthesis.
+
+For example:
+
+Balanced: (A + B) * (C / D)
+Not Balanced: ((A + B) (unmatched opening (), or (A + B)) (unmatched closing )), or )(A + B) (closing comes before opening).
